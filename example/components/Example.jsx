@@ -731,6 +731,684 @@ const steps = [
       { value: 1, label: '응 좋아!', trigger: 'INFP-10' },
       { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
     ]
+  },
+  {
+    id: 'ESTP-1',
+    message: 'ESTP 모험을 즐기는 사업가구나~ ',
+    trigger: 'ESTP-2'
+  },
+  {
+    id: 'ESTP-2',
+    message: '넌 사실적이고 관대하며 개방적이고 사람이나 사물에 대한 선입견이 별로 없지? ',
+    trigger: 'ESTP-3'
+  },
+  {
+    id: 'ESTP-3',
+    options: [
+      { value: 1, label: '오... 맞는거 같은데?', trigger: 'ESTP-4' },
+      { value: 2, label: '음... 잘 모르겠는걸?', trigger: 'ESTP-4' }
+    ]
+  },
+  {
+    id: 'ESTP-4',
+    message: '음... 긴 설명을 싫어하고 현실적이고 실용적인 것을 좋아하지?',
+    trigger: 'ESTP-5'
+  },
+  {
+    id: 'ESTP-5',
+    options: [
+      { value: 1, label: '음... 맞는 거 같아!', trigger: 'ESTP-6' },
+      { value: 2, label: '맞는거 같기두?', trigger: 'ESTP-6' }
+    ]
+  },
+  {
+    id: 'ESTP-6',
+    message: `ESTP는 전체 인구의 대략 4% 정도로 희소성이 높은 MBTI야`,
+    trigger: 'ESTP-7'
+  },
+  {
+    id: 'ESTP-7',
+    message:
+      '충만한 영감과 설득력, 그리고 다양한 성격을 가지고 팀을 이끄는 타고난 리더형이라고 하는데 맞아?',
+    trigger: 'ESTP-8'
+  },
+  {
+    id: 'ESTP-8',
+    options: [{ value: 1, label: '맞아! 잘 아는걸?', trigger: 'ESTP-9' }]
+  },
+  {
+    id: 'ESTP-9',
+    message: '스릴을 좋아하는 편이며 무대의 중심에 서는 것과 관심을 즐기는 편이지?',
+    trigger: 'ESTP-10'
+  },
+  {
+    id: 'ESTP-10',
+    options: [
+      { value: 1, label: '어떻게 알았어? 맞아!', trigger: 'ESTP-11' },
+      { value: 2, label: '그런것 같아!', trigger: 'ESTP-11' }
+    ]
+  },
+  {
+    id: 'ESTP-11',
+    message:
+      '좋아! 개방적이지고 스릴을 즐기지만 현실적인 사람인 너에게 어울리는 직업을 소개해줄게!',
+    trigger: 'ESTP-12'
+  },
+  {
+    id: 'ESTP-12',
+    options: [
+      { value: 1, label: '기자', trigger: 'ESTP-기자-1' },
+      { value: 2, label: '경찰', trigger: 'ESTP-경찰-1' },
+      { value: 3, label: '빅데이터 전문가', trigger: 'ESTP-빅데이터 전문가-1' },
+      { value: 4, label: '요리사', trigger: 'ESTP-요리사-1' }
+    ]
+  },
+  {
+    id: 'ESTP-기자-1',
+    message: '기자는 우리 주변에서 일어나는 각종 사고, 사건 ,정치, 경제 소식, 생활 정보 등을',
+    trigger: 'ESTP-기자-2'
+  },
+  {
+    id: 'ESTP-기자-2',
+    message: '신문, 잡지, 라디오, TV, 인터넷 등을 통해 일반인에게 신속하게 알려주는 일을 해',
+    trigger: 'ESTP-기자-3'
+  },
+  {
+    id: 'ESTP-기자-3',
+    message: '연봉은 3992만원 정도야!',
+    trigger: 'ESTP-기자-4'
+  },
+  {
+    id: 'ESTP-기자-4',
+    message: '인터넷에 기반한 새로운 뉴스 매체들의 시장진입과',
+    trigger: 'ESTP-기자-5'
+  },
+  {
+    id: 'ESTP-기자-5',
+    message: '뉴미디어의 발전으로 방송이 점차 다매체, 다채널화로 뉴스 소비패턴이 다양화되면서',
+    trigger: 'ESTP-기자-6'
+  },
+  {
+    id: 'ESTP-기자-6',
+    message: '뉴스 콘텐츠 수요가 증가하고 있어! 향후 10년간 고용률도 연평균 1.0% 증가할 전망이야!',
+    trigger: 'ESTP-기자-7'
+  },
+  {
+    id: 'ESTP-기자-7',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ESTP-기자-8'
+  },
+  {
+    id: 'ESTP-기자-8',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ESTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'ESTP-경찰-1',
+    message: '경찰관은 국민의 생명과 재산을 보호하는 역할을 해!',
+    trigger: 'ESTP-경찰-2'
+  },
+  {
+    id: 'ESTP-경찰-2',
+    message: '범죄 수사를 통해 범인을 잡고, 안전한 사회를 만들기 위해 노력하지!',
+    trigger: 'ESTP-경찰-3'
+  },
+  {
+    id: 'ESTP-경찰-3',
+    message: '연봉은 3783만원 정도야',
+    trigger: 'ESTP-경찰-4'
+  },
+  {
+    id: 'ESTP-경찰-4',
+    message: '민생치안을 위한 경찰인력 증원이 필요하다는 국민의 공감대가 형성되어',
+    trigger: 'ESTP-경찰-5'
+  },
+  {
+    id: 'ESTP-경찰-5',
+    message: '향후 10년간 고용은 연평균 1.7% 증가할 것으로 전망된대!',
+    trigger: 'ESTP-경찰-6'
+  },
+  {
+    id: 'ESTP-경찰-6',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ESTP-경찰-7'
+  },
+  {
+    id: 'ESTP-경찰-7',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ESTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'ESTP-빅데이터전문가-1',
+    message:
+      '빅데이터 전문가는 분석할 빅데이터 자원을 수집하여 프로그램을 만들고 통계학적으로 분석하는 일을 해!',
+    trigger: 'ESTP-빅데이터전문가-2'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-2',
+    message:
+      '대용량의 데이터를 처리하는 플랫폼을 통해 빅데이터를 처리한 후 분석결과를 시각화 하지! ',
+    trigger: 'ESTP-빅데이터전문가-3'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-3',
+    message: '연봉은 3670만원부터 시작한다고 해!',
+    trigger: 'ESTP-빅데이터전문가-4'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-4',
+    message:
+      '빅데이터는 다양한 분야의 서비스, 소프트웨어, 하드웨어 등에 매우 큰 영향을 미치기도 하기 때문에',
+    trigger: 'ESTP-빅데이터전문가-5'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-5',
+    message:
+      '경영학, 통계학, 컴퓨터공학 등 다양한 분야의 협력이 반드시 필요하다는 점에서 발전 가능성이 크고 이에 따라 빅 데이터 전문가의 직업적 전망도 밝다고 할 수 있어!',
+    trigger: 'ESTP-빅데이터전문가-6'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-6',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ESTP-빅데이터전문가-7'
+  },
+  {
+    id: 'ESTP-빅데이터전문가-7',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ESTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  //요리사 수정해야함 전망 별로
+  {
+    id: 'ESTP-요리사-1',
+    message: '요리사는 준비한 재료에 물리적, 화학적 방법을 가하여 음식을 만드는 일을 해!',
+    trigger: 'ESTP-요리사-2'
+  },
+  {
+    id: 'ESTP-요리사-2',
+    message:
+      '각종 양념, 조미료 등을 준비하고, 오븐, 솥, 전자렌지 등 각종 요리기구를 사용하여 적당한 조리법에 따라 요리하지!',
+    trigger: 'ESTP-요리사-3'
+  },
+  {
+    id: 'ESTP-요리사-3',
+    message: '연봉은 3499만원 정도야!',
+    trigger: 'ESTP-요리사-4'
+  },
+  {
+    id: 'ESTP-요리사-4',
+    message:
+      '다른 산업에 비해 진입이 쉬워 청년층 뿐만 아니라 은퇴한 중년층의 음식점 창업에 몰리면서 외식시장이 포화상태에 있다고 해!',
+    trigger: 'ESTP-요리사-5'
+  },
+  {
+    id: 'ESTP-요리사-5',
+    message: '조리사 및 주방장에 대한 인력수요는 증가할 것으로 전망된대!',
+    trigger: 'ESTP-요리사-6'
+  },
+  {
+    id: 'ESTP-요리사-6',
+    message: '향후 10년간 고용은 연평균 1.9% 증가할 것이라네!',
+    trigger: 'ESTP-요리사-7'
+  },
+  {
+    id: 'ESTP-요리사-7',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ESTP-요리사-8'
+  },
+  {
+    id: 'ESTP-요리사-8',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ESTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+
+  {
+    id: 'ENTP-1',
+    message: 'ENTP구나! 너는 자존감과 자기 확신이 높아 맞아?',
+    trigger: 'ENTP-2'
+  },
+  {
+    id: 'ENTP-2',
+    options: [
+      { value: 1, label: '응 맞아!', trigger: 'ENTP-3' },
+      { value: 2, label: '음... 잘 모르겠는걸?', trigger: 'ENTP-3' }
+    ]
+  },
+  {
+    id: 'ENTP-3',
+    message: '그리고 혼자서도 뭐든 잘놀고 재밌게 생활 할 수 있어 맞니?',
+    trigger: 'ENTP-4'
+  },
+  {
+    id: 'ENTP-4',
+    options: [
+      { value: 1, label: '음... 맞는 거 같아!', trigger: 'ENTP-5' },
+      { value: 2, label: '맞는거 같기두?', trigger: 'ENTP-5' }
+    ]
+  },
+  {
+    id: 'ENTP-5',
+    message: `또 개인적인 시간과 장소를 비교적 많이 필요로 해 그치?`,
+    trigger: 'ENTP-6'
+  },
+  {
+    id: 'ENTP-6',
+    message:
+      '조용하거나 겸손해 보일 수 있지만 내면에는 활기차고 열정적인 마음을 가지고 있지! 안그래?',
+    trigger: 'ENTP-7'
+  },
+  {
+    id: 'ENTP-7',
+    options: [{ value: 1, label: '맞아! 잘 아는걸?', trigger: 'ENTP-8' }]
+  },
+  {
+    id: 'ENTP-8',
+    message: '후후! 낭만이 많은 성격이며 관심분야에 대한 혼자만의 취미생활이 있지? ',
+    trigger: 'ENTP-9'
+  },
+  {
+    id: 'ENTP-9',
+    options: [
+      { value: 1, label: '어떻게 알았어? 맞아!', trigger: 'ENTP-10' },
+      { value: 2, label: '그런것 같아!', trigger: 'ENTP-10' }
+    ]
+  },
+  {
+    id: 'ENTP-10',
+    message: '좋아! 감성적이며 활기찬 너에게 어울리는 직업을 소개해줄게!',
+    trigger: 'ENTP-11'
+  },
+  {
+    id: 'ENTP-11',
+    options: [
+      { value: 1, label: '프로듀서', trigger: 'ENTP-프로듀서-1' },
+      { value: 2, label: '작가', trigger: 'ENTP-작가-1' },
+      { value: 3, label: '심리학자', trigger: 'ENTP-심리학자-1' },
+      { value: 4, label: '영양사', trigger: 'ENTP-영양사-1' }
+    ]
+  },
+  {
+    id: 'ENTP-프로듀서-1',
+    message: '프로듀서는 라디오 또는 텔레비전의 프로그램을 기획하고 제작하는 일을 해!',
+    trigger: 'ENTP-프로듀서-2'
+  },
+  {
+    id: 'ENTP-프로듀서-2',
+    message: '완성된 대본을 평가하고 프로그램을 기획해 제작진과 연기자들을 선출하지',
+    trigger: 'ENTP-프로듀서-3'
+  },
+  {
+    id: 'ENTP-프로듀서-3',
+    message:
+      '뿐만 아니라 의상, 무대배경, 음악, 카메라작업 등을 결정하기 위해 제작진과 협의하는 사람이지!',
+    trigger: 'ENTP-프로듀서-4'
+  },
+  {
+    id: 'ENTP-프로듀서-4',
+    message: '연봉은 4701만원 정도야!',
+    trigger: 'ENTP-프로듀서-5'
+  },
+  {
+    id: 'ENTP-프로듀서-5',
+    message: '뉴미디어의 발전으로 방송이 점차 다매체, 다채널화 되어',
+    trigger: 'ENTP-프로듀서-6'
+  },
+  {
+    id: 'ENTP-프로듀서-6',
+    message: '방송프로그램의 제작 수가 증가함에 따라 인력수요도 증가하고 있어!',
+    trigger: 'ENTP-프로듀서-7'
+  },
+  {
+    id: 'ENTP-프로듀서-7',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ENTP-프로듀서-8'
+  },
+  {
+    id: 'ENTP-프로듀서-8',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ENTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'ENTP-작가-1',
+    message: '작가는 예술과 취미의 분야에서 작품을 창작하는 사람을 말해!',
+    trigger: 'ENTP-작가-2'
+  },
+  {
+    id: 'ENTP-작가-2',
+    message: '연봉은 3309만원 정도야!',
+    trigger: 'ENTP-작가-3'
+  },
+  {
+    id: 'ENTP-작가-3',
+    message:
+      '앞으로의 전망은 국민의 소득상승과 생활수준 향상으로 문화콘텐츠의 수요가 증가하고 있고',
+    trigger: 'ENTP-작가-4'
+  },
+  {
+    id: 'ENTP-작가-4',
+    message:
+      '특히 하나의 콘텐츠가 뜨게 되면 영화, 드라마, 애니메이션 등의 기타 연관 산업으로까지 활용되기 때문에 작가의 인력수요는 다소 증가할 것으로 보여!',
+    trigger: 'ENTP-작가-5'
+  },
+  {
+    id: 'ENTP-작가-5',
+    message: '향후 10년간 고용은 연평균 1.3% 증가될 것으로 나타난대!',
+    trigger: 'ENTP-작가-6'
+  },
+  {
+    id: 'ENTP-작가-6',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ENTP-작가-7'
+  },
+  {
+    id: 'ENTP-작가-7',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ENTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'ENTP-심리학자-1',
+    message: '심리학자는 인간의 행동과 정신적 과정을 과학적이고 체계적 방법을 통해 연구해!',
+    trigger: 'ENTP-심리학자-2'
+  },
+  {
+    id: 'ENTP-심리학자-2',
+    message:
+      '연구 결과를 통해 의학이나 교육, 산업 현장에서 응용할 수 있는 심리학적 지식과 정보 등을 제공하지! ',
+    trigger: 'ENTP-심리학자-3'
+  },
+  {
+    id: 'ENTP-심리학자-3',
+    message: '심리학자의 연봉은 3235만원부터 시작해!',
+    trigger: 'ENTP-심리학자-4'
+  },
+  {
+    id: 'ENTP-심리학자-4',
+    message: '현대사회에서 국민의 정신 보건에 대한 중요성이 강조되고, 인사선발과정, 인사컨설팅, ',
+    trigger: 'ENTP-심리학자-5'
+  },
+  {
+    id: 'ENTP-심리학자-5',
+    message:
+      '청소년의 진로개발 등의 분야에서도 심리검사 수요가 증가하고 있어 고용 수가 연 1.9% 증가할 전망이야! ',
+    trigger: 'ENTP-심리학자-6'
+  },
+  {
+    id: 'ENTP-심리학자-6',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ENTP-심리학자-7'
+  },
+  {
+    id: 'ENTP-심리학자-7',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ENTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'ENTP-영양사-1',
+    message: '영양사는 학교, 병원, 회사, 호텔과 같은 시설에서',
+    trigger: 'ENTP-영양사-2'
+  },
+  {
+    id: 'ENTP-영양사-2',
+    message:
+      '급식대상자의 기호, 영양가, 조리능력, 비용 등을 기초로 하여 섭식의 준비를 기획하고 작성하지!',
+    trigger: 'ENTP-영양사-3'
+  },
+  {
+    id: 'ENTP-영양사-3',
+    message: '연봉은 2907만원 정도야!',
+    trigger: 'ENTP-영양사-4'
+  },
+  {
+    id: 'ENTP-영양사-4',
+    message: "국민의 영양 및 건강 증진을 도모하기 위한 '국민영양관리법'이 제정됨에 따라. ",
+    trigger: 'ENTP-영양사-5'
+  },
+  {
+    id: 'ENTP-영양사-5',
+    message:
+      '1회 급식인원 100인 이상의 산업체의 경우 영양사를 의무배치 하도록 식품위생법이 개정되어서',
+    trigger: 'ENTP-영양사-6'
+  },
+  {
+    id: 'ENTP-영양사-6',
+    message: '향후 10년간 고용은 연평균 1.9% 증가되는 전망이래!',
+    trigger: 'ENTP-영양사-7'
+  },
+  {
+    id: 'ENTP-영양사-7',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'ENTP-영양사-8'
+  },
+  {
+    id: 'ENTP-영양사-8',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'ENTP-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+
+  //동건님 부분, 수정할 것 INFJ만 있다.
+  {
+    id: 'INFJ-1',
+    message: '안녕! 너 이름이 뭐니!?',
+    trigger: 'INFJ-2'
+  },
+  {
+    id: 'INFJ-2',
+    user: true,
+    trigger: 'INFJ-3'
+  },
+  {
+    id: 'INFJ-3',
+    message: ' {previousValue}?, 좋은 이름이네!',
+    trigger: 'INFJ-4'
+  },
+  {
+    id: 'INFJ-4',
+    message: ' mbti는?',
+    trigger: 'INFJ-5'
+  },
+  {
+    id: 'INFJ-5',
+    user: true,
+    trigger: 'INFJ-6'
+  },
+  {
+    id: 'INFJ-6',
+    message: ' {previousValue}?, 특이한 유형이네!',
+    trigger: 'INFJ-7'
+  },
+  {
+    id: 'INFJ-7',
+    message: ' 전 세계 MBTI 유형중 가장 희귀한 소수의 유형인거 알고있니?',
+    trigger: 'INFJ-8'
+  },
+  {
+    id: 'INFJ-8',
+    message: ' 이 사람들은 어떤 직업을 가지고 있을까??? 궁금하지?',
+    trigger: 'INFJ-9'
+  },
+  {
+    id: 'INFJ-9',
+    options: [{ value: 1, label: 'ㅇㅇ! 궁금해!', trigger: 'INFJ-10' }]
+  },
+  {
+    id: 'INFJ-10',
+    message: ' 좋아! 한 번 알아 보자!',
+    trigger: 'INFJ-11'
+  },
+  {
+    id: 'INFJ-11',
+    message:
+      ' INFJ 사람들은 물리치료사 , 보건 교사 , 디자이너,  번역가, 사회과학자 등으로 활약 하고 있지! 혹시 흥미로운 직업이 보이니??',
+    trigger: 'INFJ-12'
+  },
+  {
+    id: 'INFJ-12',
+    options: [
+      { value: 1, label: '물리치료사', trigger: 'INFJ-물리치료사' },
+      { value: 2, label: '보건 교사', trigger: 'INFJ-보건 교사' },
+      { value: 3, label: '번역가', trigger: 'INFJ-번역가' },
+      { value: 4, label: '디자이너', trigger: 'INFJ-디자이너' }
+    ]
+  },
+  {
+    id: 'INFJ',
+    message: '다른 직업도 궁금하니?',
+    trigger: 'INFJ-12'
+  },
+  {
+    id: 'INFJ-물리치료사',
+    message: ' 물리치료사에 관심이 있구나!!',
+    trigger: 'INFJ-물리치료사-2'
+  },
+  {
+    id: 'INFJ-물리치료사-2',
+    message: ' 좋은 직업이지!',
+    trigger: 'INFJ-물리치료사-3'
+  },
+  {
+    id: 'INFJ-물리치료사-3',
+    message:
+      ' 물리치료사는 근골격계 또는 신경계 손상 환자들을 대상으로 온열치료, 전기치료, 광선치료, 수치료, 도수치료, 기계 및 기구치료, 치료적 마사지, 기능훈련, 신체교정운동 및 재활훈련과 이에 필요한 기기, 환자교육, 약품의 사용 및 관리 등의 일을 하는 분들이야!',
+    trigger: 'INFJ-물리치료사-4'
+  },
+  {
+    id: 'INFJ-물리치료사-4',
+    message:
+      ' 현재 대한민국에서 연간 배출인원은 약 3,100명 이고 물리치료사를 포함한 물리 및 작업치료사의 종사자 수는 48,000명이며, 최근에 발달장애 아동 및 노인의 재활분야에 대한 사회복지 제도가 확대되면서 물리치료사의 수요 증가 요인으로 작용하고 있어! 따라서 향후 10년간 고용은 연평균 2.3% 증가할 것으로 전망되지!',
+    trigger: 'INFJ-물리치료사-5'
+  },
+  {
+    id: 'INFJ-물리치료사-5',
+    message: ' 전망증가 66%, 현상유지 20%, 감소 13%',
+    trigger: 'INFJ-물리치료사-6'
+  },
+  {
+    id: 'INFJ-물리치료사-6',
+    message: ' 임금수준물리치료사 하위(25%) 2,841만원, 중위값 3,278만원, 상위(25%) 3,917만원',
+    trigger: 'INFJ-물리치료사-7'
+  },
+  {
+    id: 'INFJ-물리치료사-7',
+    message: ' 직업만족도물리치료사에 대한 직업 만족도는 69.5% (백점 기준)',
+    trigger: 'INFJ-물리치료사-8'
+  },
+  {
+    id: 'INFJ-물리치료사-8',
+    message: ' 전망증가 66%, 현상유지 20%, 감소 13%',
+    trigger: 'INFJ'
+  },
+  {
+    id: 'INFJ-보건 교사',
+    message: '보건 교사에 관심이 있구나!!',
+    trigger: 'INFJ-보건 교사-2'
+  },
+  {
+    id: 'INFJ-보건 교사-2',
+    message: '좋은 직업이지!',
+    trigger: 'INFJ-보건 교사-3'
+  },
+  {
+    id: 'INFJ-보건 교사-3',
+    message:
+      '보건교사는 학생과 교직원의 건강상태와 학교의 보건활동 진행상태를 평가하기 위해 정기적인 건강 진단 또는 검사를 실시하시고. 응급처치, 가정간호, 질병 및 전염병에 대한 보건교육과 건강상담을 담당하며 예방접종을 시행하시는 분이야!',
+    trigger: 'INFJ-보건 교사-4'
+  },
+  {
+    id: 'INFJ-보건 교사-4',
+    message:
+      '보건교사가 되기 위해서는 간호학사를 취득하고 각 시·도 교육청에서 실시하는 보건교사 임용시험에 합격해야해',
+    trigger: 'INFJ-보건 교사-5'
+  },
+  {
+    id: 'INFJ-보건 교사-5',
+    message:
+      '교육부는 비교과 분야의 보건·영양 등의 교원이 2018년도 법정정원에 현저히 미달되어 있어 이 분야 인력을 대규모로 채용하겠다고 발표했으며 실제로 2021년도엔 보건교사 모집이 역대 최대 수치로 이루어졌어!',
+    trigger: 'INFJ-보건 교사-6'
+  },
+  {
+    id: 'INFJ-보건 교사-6',
+    message: '하위(25%) 3,488만 원, 중위값 4,078만 원, 상위(25%) 5,305만 원',
+    trigger: 'INFJ'
+  },
+  {
+    id: 'INFJ-번역가',
+    message: '번역가에 관심이 있구나!!',
+    trigger: 'INFJ-번역가-2'
+  },
+  {
+    id: 'INFJ-번역가-2',
+    message: '좋은 직업이지!',
+    trigger: 'INFJ-번역가-3'
+  },
+  {
+    id: 'INFJ-번역가-3',
+    message:
+      '번역가는 외국어를 국문으로, 국문을 외국어로 번역하고 글로 작성하는 역할을 하는 직업이야',
+    trigger: 'INFJ-번역가-4'
+  },
+  {
+    id: 'INFJ-번역가-4',
+    message: '번역가 하위(25%) 3,137만 원, **중위값 3,736만 원**, 상위(25%) 4,335만 원',
+    trigger: 'INFJ-번역가-5'
+  },
+  {
+    id: 'INFJ-번역가-5',
+    message:
+      '향후 5년간 번역가의 고용은 현 상태를 유지하는 수준 또는 향상이 될 것으로 전망된다고 해! 전 세계적으로 문화교류가 증가하면서 각국의 문학작품이나 영상물 등 다양한 자료들의 번역 업무가 늘어나고 있기 때문이지!',
+    trigger: 'INFJ-번역가-6'
+  },
+  {
+    id: 'INFJ-번역가-6',
+    message: '번역가로 유명한 사람으로는  안정효 님 류시화 시인님 등이 있어!',
+    trigger: 'INFJ'
+  },
+  {
+    id: 'INFJ-디자이너',
+    message: '디자이너에 관심이 있구나!!',
+    trigger: 'INFJ-디자이너-2'
+  },
+  {
+    id: 'INFJ-디자이너-2',
+    message: '좋은 직업이지!',
+    trigger: 'INFJ-디자이너-3'
+  },
+  {
+    id: 'INFJ-디자이너-3',
+    message:
+      '실물을 제작하기 전에 도면, 계획서, 설계도 등을 작성함으로써 그 구조나 형태를 계획하는 사람을  포괄적으로 디자이너라고해! 여기서 실물이라 함은 건물, 옷, 기계 등의 유형물일 수도 있고, 법률, 서비스, 비디오게임, 그래픽 등의 무형물일 수도 있지!',
+    trigger: 'INFJ-디자이너-4'
+  },
+  {
+    id: 'INFJ-디자이너-4',
+    message: '하위(25%) 3,388만 원, **중위값 4,145만 원**, 상위(25%) 5,096만 원',
+    trigger: 'INFJ-디자이너-5'
+  },
+  {
+    id: 'INFJ-디자이너-5',
+    message:
+      '디자이너의 일자리 전망은 분야에 따라 상이한 양상을 보이지만, 철저히 능력위주로 평가받기 때문에 좋은 디자이너를 원하는 기업들은 점점더 많아 질것으로 전망되지! 지속적인 자기계발을 한다면 좋은 선택이 될 것이라고 평가받고 있어!',
+    trigger: 'INFJ-디자이너-6'
+  },
+  {
+    id: 'INFJ-디자이너-6',
+    message:
+      '디자이너로 유명한 사람으로는 레이먼드 로위,가브리엘 샤넬,TBWA,알렉세이 브로도비치 등이 있어!',
+    trigger: 'INFJ'
   }
 ];
 
