@@ -34,7 +34,7 @@ const steps = [
   {
     id: '4',
     options: [
-      { value: 1, label: 'INTJ', trigger: '1' },
+      { value: 1, label: 'INTJ', trigger: 'INTJ-1' },
       { value: 2, label: 'INTP', trigger: 'INTP-1' },
       { value: 3, label: 'ENTJ', trigger: 'ENTJ-1' },
       { value: 4, label: 'ENTP', trigger: 'ENTP-1' },
@@ -45,7 +45,7 @@ const steps = [
       { value: 9, label: 'ISTJ', trigger: 'ISTJ-1' },
       { value: 10, label: 'ISFJ', trigger: 'ISFJ-1' },
       { value: 11, label: 'ESTJ', trigger: 'ESTJ-1' },
-      { value: 12, label: 'ESFJ', trigger: '1' },
+      { value: 12, label: 'ESFJ', trigger: 'ESFJ-1' },
       { value: 13, label: 'ISTP', trigger: 'ISTP-1' },
       { value: 14, label: 'ISFP', trigger: 'ISFP-1' },
       { value: 15, label: 'ESTP', trigger: 'ESTP-1' },
@@ -3807,7 +3807,7 @@ const steps = [
   {
     id: 'ESFJ-1',
     message:
-      'ESFP구나! 넌 대중 앞에서 자기표현이나 어필, 연설로 가치관을 호소할 때 겁내지 않고 잘 말할 수 있지?',
+      'ESFP! 너는 사교적인 외교관이구나! 친목도모형이라고도 할 수 있지 모든 MBTI 유형 중에서 ESFP와 함께 외향성 기질이 가장 강해 너를 간단히 표현하자면 ‘인기쟁이’야',
     trigger: 'ESFJ-2'
   },
   {
@@ -3819,246 +3819,582 @@ const steps = [
   },
   {
     id: 'ESFJ-3',
-    message: '흥미를 갖고 정열을 기울이고 있는 것에 대해서는 유달리 열심히 목표를 의식하지?',
+    message:
+      '인구의 대략 12%를 차지하는 꽤 보편적인 유형이기도 해. 타고난 협력자로서 동료애가 많고 친절하지! 이야기하는 걸 좋아하고 참을성이 많은 성격이야! 혹시 강의 들을 때 고개를 많이 끄덕이니?',
     trigger: 'ESFJ-4'
   },
   {
     id: 'ESFJ-4',
     options: [
-      { value: 1, label: '음... 맞는 거 같아!', trigger: 'ESFJ-5' },
-      { value: 2, label: '맞는거 같기두?', trigger: 'ESFJ-5' }
+      { value: 1, label: '음... 그런거 같아', trigger: 'ESFJ-5' },
+      { value: 2, label: '맞아! 어떻게 알았어?', trigger: 'ESFJ-5' }
     ]
   },
   {
     id: 'ESFJ-5',
-    message: `목표를 달성할 때는 효율적으로 이루기 위해서 계획을 세우며, 혼자서 할 수 없는 일은 도움을 구하는 편이지?`,
+    message: `
+    리액션이 좋은 편이라 그럴 줄 알았어!
+    한편으로는 세상 물정에 밝고 현실주의자이기도 해.
+    자존감이 높은 편이지만 티를 내지는 않지!
+    너 참 매력있는 아이구나!
+    `,
     trigger: 'ESFJ-6'
   },
 
   {
     id: 'ESFJ-6',
     options: [
-      { value: 1, label: '응 맞아', trigger: 'ESFJ-7' },
-      { value: 2, label: '쫌 그런거 같아', trigger: 'ESFJ-7' }
+      { value: 1, label: '고마워~', trigger: 'ESFJ-7' },
+      { value: 2, label: '맞아, 난 최고야', trigger: 'ESFJ-7' }
     ]
   },
   {
     id: 'ESFJ-7',
-    message: '예술, 음악, 노래, 춤 같은 것들을 좋아하고',
+    message: '사람들과 소통하기를 좋아하고',
     trigger: 'ESFJ-8'
   },
   {
     id: 'ESFJ-8',
-    message: '대중들 앞에서 부르는 것을 두려워하지 않지?',
+    message: '다른사람들을 잘 도와주는 편이지?',
     trigger: 'ESFJ-9'
   },
   {
     id: 'ESFJ-9',
     options: [
-      { value: 1, label: '어떻게 알았어? 맞아!', trigger: 'ESFJ-10' },
+      { value: 1, label: '맞아!', trigger: 'ESFJ-10' },
       { value: 2, label: '그런것 같아!', trigger: 'ESFJ-10' }
     ]
   },
   {
     id: 'ESFJ-10',
-    message: '사교적이고 활동적이며 예술성이 뛰어난 너에게 맞는 직업을 추천해줄게!',
+    message: '사교적이며 동정심이 많고 친절한 너에게 맞는 직업을 추천해줄게!',
     trigger: 'ESFJ-11'
   },
   {
     id: 'ESFJ-11',
     options: [
-      { value: 1, label: '일러스트레이터', trigger: 'ESFJ-일러스트레이터-1' },
-      { value: 2, label: '승무원', trigger: 'ESFJ-승무원-1' },
-      { value: 3, label: '배우', trigger: 'ESFJ-배우-1' },
-      { value: 4, label: '애니메이터 ', trigger: 'ESFJ-애니메이터-1' }
+      { value: 1, label: '호텔지배인', trigger: 'ESFJ-호텔지배인-1' },
+      { value: 2, label: '간호사', trigger: 'ESFJ-간호사-1' },
+      { value: 3, label: '교사', trigger: 'ESFJ-교사-1' },
+      { value: 4, label: '마케팅책임자 ', trigger: 'ESFJ-마케팅책임자-1' }
     ]
   },
   {
-    id: 'ESFJ-일러스트레이터-1',
+    id: 'ESFJ-호텔지배인-1',
+    message: '호텔지배인을 선택했구나!',
+    trigger: 'ESFJ-호텔지배인-2'
+  },
+  {
+    id: 'ESFJ-호텔지배인-2',
+    message: '호텔지배인은 객실 예약업무, 판매업무, 접객, 식당, 주방, 홍보 등 호텔에서 이루어지는',
+    trigger: 'ESFJ-호텔지배인-3'
+  },
+  {
+    id: 'ESFJ-호텔지배인-3',
+    message: '다양한 작업들이 원활히 운용될 수 있도록 각종 활동들을 계획하고',
+    trigger: 'ESFJ-호텔지배인-4'
+  },
+  {
+    id: 'ESFJ-호텔지배인-4',
+    message: '종사원들의 업무를 종합적으로 관리감독하는 직업이야!',
+    trigger: 'ESFJ-호텔지배인-5'
+  },
+  {
+    id: 'ESFJ-호텔지배인-5',
     message:
-      '일러스트레이터는 주로 광고나 영상매체의 그림이나 문양을 도안하고 제작하는 일을 담당해!',
-    trigger: 'ESFJ-일러스트레이터-2'
+      '관습형과 사회형의 흥미를 가진 사람에게 적합하며, 협조심, 적응성 및 융통성, 남에 대한 배려 등을 가진 사람인 ESFJ에겐 안성맞춤인 직업이야!',
+    trigger: 'ESFJ-호텔지배인-6'
   },
   {
-    id: 'ESFJ-일러스트레이터-2',
-    message: '이 직업을 하기 위해서는 색채 감각과 조형 감각 및 세심함, 꼼꼼함이 요구돼!',
-    trigger: 'ESFJ-일러스트레이터-3'
-  },
-  {
-    id: 'ESFJ-일러스트레이터-3',
-    message: '연봉은 평균 3000만원이야!',
-    trigger: 'ESFJ-일러스트레이터-4'
-  },
-  {
-    id: 'ESFJ-일러스트레이터-4',
+    id: 'ESFJ-호텔지배인-6',
     message:
-      '일러스트레이터를 포함한 시각디자이너의 종사자 수는 62,000명이며, 멀티미디어가 발달하면서',
-    trigger: 'ESFJ-일러스트레이터-5'
+      '호텔지배인이 되기 위해서는 전문대학이나 대학교의 호텔 및 관광관련 학과를 졸업하는 것이 유리해.',
+    trigger: 'ESFJ-호텔지배인-7'
   },
   {
-    id: 'ESFJ-일러스트레이터-5',
-    message: '책, 잡지, 영상뿐만아니라 웹콘텐츠에도 활용되면서 수요가 증가하고 있어',
-    trigger: 'ESFJ-일러스트레이터-6'
+    id: 'ESFJ-호텔지배인-7',
+    message:
+      '관련 직업분야에서 몇 년 정도의 경험을 쌓아야 하며, 틈틈이 호텔의 인턴십이나 아르바이트 등을 통해 실무경험을 쌓는 것이 좋아><',
+    trigger: 'ESFJ-호텔지배인-8'
   },
   {
-    id: 'ESFJ-일러스트레이터-6',
-    message: '향후 10년간 고용은 연평균 0.9% 증가할 것으로 전망된다',
-    trigger: 'ESFJ-일러스트레이터-7'
+    id: 'ESFJ-호텔지배인-8',
+    message: '호텔서비스사, 호텔관리사, 호텔경영사 같은 자격증도 있으니 알아둬!',
+    trigger: 'ESFJ-호텔지배인-9'
   },
   {
-    id: 'ESFJ-일러스트레이터-7',
+    id: 'ESFJ-호텔지배인-9',
     message: ' 다른 직업들도 다시 볼래? ',
-    trigger: 'ESFJ-일러스트레이터-8'
+    trigger: 'ESFJ-호텔지배인-10'
   },
   {
-    id: 'ESFJ-일러스트레이터-8',
+    id: 'ESFJ-호텔지배인-10',
     options: [
       { value: 1, label: '응 좋아!', trigger: 'ESFJ-10' },
       { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
     ]
   },
   {
-    id: 'ESFJ-승무원-1',
-    message: '승무원이 하는 일은 하늘 길에서 탑승객이 목적지까지 안전하고 쾌적하게',
-    trigger: 'ESFJ-승무원-2'
+    id: 'ESFJ-간호사-1',
+    message: '간호사를 선택했구나!',
+    trigger: 'ESFJ-간호사-2'
   },
   {
-    id: 'ESFJ-승무원-2',
-    message: '여행할 수 있도록 편의와 안전을 도모하고 기내에서 각종 서비스를 제공하는 직업이야!',
-    trigger: 'ESFJ-승무원-3'
+    id: 'ESFJ-간호사-2',
+    message:
+      '간호사는 병원에서 의사, 여러 전문인력들과 협력하여, 24시간 환자 곁에서 의사의 처방이나 규정된 간호기술에 따라 치료하는 사람이야!',
+    trigger: 'ESFJ-간호사-3'
   },
   {
-    id: 'ESFJ-승무원-3',
-    message: '이 직업은 봉사정신이 투철하고 친절한 사람에게 유리하다고 생각해!',
-    trigger: 'ESFJ-승무원-4'
+    id: 'ESFJ-간호사-3',
+    message:
+      '간호사가 되려면 간호학과(4년제)를 졸업하고 국가(한국보건의료인 국가시험원)에서 시행하는',
+    trigger: 'ESFJ-간호사-4'
   },
   {
-    id: 'ESFJ-승무원-4',
-    message: '또한 장시간의 비행이 많기 때문에 강한 체력 또한 필수지!',
-    trigger: 'ESFJ-승무원-5'
+    id: 'ESFJ-간호사-4',
+    message: '간호사 시험을 합격한 후 간호사 면허증을 취득해야 해야만해!',
+    trigger: 'ESFJ-간호사-5'
   },
   {
-    id: 'ESFJ-승무원-5',
-    message: '연봉은 평균 4000만원 정도야!',
-    trigger: 'ESFJ-승무원-6'
+    id: 'ESFJ-간호사-5',
+    message: '연봉은 4,351만원 정도야',
+    trigger: 'ESFJ-간호사-6'
   },
   {
-    id: 'ESFJ-승무원-6',
-    message: '주로 정규직으로 채용되며, 고용도 잘 유지되는 것으로 나타나고 있어!',
-    trigger: 'ESFJ-승무원-7'
+    id: 'ESFJ-간호사-6',
+    message:
+      '근 의료 관련 감염에 대한 사회적 관심이 늘고, 질병관리본부에서도 각종 세미나, 자문 의뢰 등을 하면서 관심이 커지고 있고,',
+    trigger: 'ESFJ-간호사-7'
   },
   {
-    id: 'ESFJ-승무원-7',
-    message: '일자리의 창출과 성장이 활발하고 임금과 복리후생이 높아!',
-    trigger: 'ESFJ-승무원-8'
+    id: 'ESFJ-간호사-7',
+    message:
+      '평균수명의 증가로 노인인구가 늘어나고 만성질환이 증가하면서 건강증진과 질병예방 등 건강관리에 대한 관심이 높아지고 있어서',
+    trigger: 'ESFJ-간호사-8'
   },
   {
-    id: 'ESFJ-승무원-8',
+    id: 'ESFJ-간호사-8',
+    message: '간호사의 앞으로의 전망은 좋을거라고 해!',
+    trigger: 'ESFJ-간호사-9'
+  },
+  {
+    id: 'ESFJ-간호사-9',
     message: ' 다른 직업들도 다시 볼래? ',
-    trigger: 'ESFJ-승무원-9'
+    trigger: 'ESFJ-간호사-10'
   },
   {
-    id: 'ESFJ-승무원-9',
+    id: 'ESFJ-간호사-10',
     options: [
       { value: 1, label: '응 좋아!', trigger: 'ESFJ-10' },
       { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
     ]
   },
   {
-    id: 'ESFJ-배우-1',
-    message: '배우가 하는일은 어떤 영화나 드라마에 캐스팅 되서 배역이 결정되면 캐릭터를 분석하고,',
-    trigger: 'ESFJ-배우-2'
+    id: 'ESFJ-교사-1',
+    message: '교사를 선택했구나!',
+    trigger: 'ESFJ-교사-2'
   },
   {
-    id: 'ESFJ-배우-2',
-    message: '연출자 및 감독, 작가 등과 논의하여 극중 인물에 맞는 표정, 행동, 대사 톤 등을 설정해',
-    trigger: 'ESFJ-배우-3'
-  },
-  {
-    id: 'ESFJ-배우-3',
-    message: '촬영을 하거나 무대에서 공연을 하는 직업이야.',
-    trigger: 'ESFJ-배우-4'
-  },
-  {
-    id: 'ESFJ-배우-4',
+    id: 'ESFJ-교사-2',
     message:
-      '배우의 연봉은 너무 천차만별이기에 정확한 답변을 주긴 어렵지만 유명 배우의 경우 광고촬영과 영화촬영, 드라마 촬영으로 수십-수백억원을 받아!',
-    trigger: 'ESFJ-배우-5'
+      '교사는 학교에서 학생들과 함께 시간을 보내며 공부를 가르치고 생활태도를 지도하여 아이들의 성장을 돕는 일을 해.',
+    trigger: 'ESFJ-교사-3'
   },
   {
-    id: 'ESFJ-배우-5',
+    id: 'ESFJ-교사-3',
+    message: '수업 과정과 학생들을 향한 열정이 필요해!',
+    trigger: 'ESFJ-교사-4'
+  },
+  {
+    id: 'ESFJ-교사-4',
     message:
-      '한류로 인해 급격히 우리나라 문화산업이 성장하면서 방송, 영화, 연극, 공연 등의 엔터테인먼트 산업도 함께 성장하였어',
-    trigger: 'ESFJ-배우-6'
+      ' 긍정적인 학습 경험을 만들어 내야할 뿐만 아니라, 학생들과 긍정적인 관계를 형성하는 일도 중요하기 때문에 이야기하기를 좋아하는 ESFJ에게는 딱인 직업아닐까?',
+    trigger: 'ESFJ-교사-5'
   },
   {
-    id: 'ESFJ-배우-6',
+    id: 'ESFJ-교사-5',
     message:
-      '따라서 산업의 규모가 커짐에 따라 연기자의 인력수요는 향후 10년간 연평균 1.9% 증가할 것으로 전망된대!',
-    trigger: 'ESFJ-배우-7'
+      '교사는 유치원교사(유치원생), 초등교사(초등학생), 중등교사(중∙고등학생)로 나뉘고 가르치려고 하는 대상에 따라 다른 대학 및 학과를 선택해서 공부해야 해.',
+    trigger: 'ESFJ-교사-6'
   },
   {
-    id: 'ESFJ-배우-7',
+    id: 'ESFJ-교사-6',
+    message: '대학에서 전공한 과목에 따라 취득할 수 있는 교사 자격증의 종류가 정해져!',
+    trigger: 'ESFJ-교사-7'
+  },
+  {
+    id: 'ESFJ-교사-7',
     message: ' 다른 직업들도 다시 볼래? ',
-    trigger: 'ESFJ-배우-8'
+    trigger: 'ESFJ-교사-8'
   },
   {
-    id: 'ESFJ-배우-8',
+    id: 'ESFJ-교사-8',
     options: [
       { value: 1, label: '응 좋아!', trigger: 'ESFJ-10' },
       { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
     ]
   },
   {
-    id: 'ESFJ-애니메이터-1',
+    id: 'ESFJ-마케팅책임자-1',
+    message: '마케팅전문가는 마케팅과 소비자 행동 등에 대한 전문 지식을 활용하여 특정 상품의',
+    trigger: 'ESFJ-마케팅책임자-2'
+  },
+  {
+    id: 'ESFJ-마케팅책임자-2',
     message:
-      '애니메이터는 애니메이션의 기획부터 창작, 연출, 채색, 편집에 이르기까지 전 분야의 일을 담당해서 작업하는 직업이야~',
-    trigger: 'ESFJ-애니메이터-2'
+      '시장성, 소비자 취향, 잠재 구매 고객 등에 대해 조사하여 효율적인 판매 전략을 계획하고 실행해!',
+    trigger: 'ESFJ-마케팅책임자-3'
   },
   {
-    id: 'ESFJ-애니메이터-2',
-    message: '이 직업은 만화에 대한 애정이 있어야하고 그림 소질도 물론 있어야해!',
-    trigger: 'ESFJ-애니메이터-3'
+    id: 'ESFJ-마케팅책임자-3',
+    message:
+      '특정 상품이나 서비스에 대한 홍보와 효율적인 판매전략을 계획하고 실행하는 회사의 중요한 역할을 하지!',
+    trigger: 'ESFJ-마케팅책임자-4'
   },
   {
-    id: 'ESFJ-애니메이터-3',
-    message: '만화를 잘 만들기 위해서는 풍부한 상상력과 문장력, 창의성을 바탕으로',
-    trigger: 'ESFJ-애니메이터-4'
+    id: 'ESFJ-마케팅책임자-4',
+    message:
+      '책임감과 조심성이 있는 사람에게 적합하며, 혁신, 적응성 및 융통성, 분석적 사고 등의 성격을 가진 사람들에게 유리해.',
+    trigger: 'ESFJ-마케팅책임자-5'
   },
   {
-    id: 'ESFJ-애니메이터-4',
-    message: '만화를 제작하는 데 필요한 컴퓨터 프로그램을 조작할 수 있는 능력이 필요해.',
-    trigger: 'ESFJ-애니메이터-5'
+    id: 'ESFJ-마케팅책임자-5',
+    message:
+      '소비자가 상품을 사게끔 만드는 혁신적이고 창의적인 생각을 할 수 있는 사람인 ESFJ에겐 안성맞춤인 직업이야!',
+    trigger: 'ESFJ-마케팅책임자-6'
   },
   {
-    id: 'ESFJ-애니메이터-5',
-    message: '애니메이터의 평균 연봉은 3000만원이야~',
-    trigger: 'ESFJ-애니메이터-6'
+    id: 'ESFJ-마케팅책임자-6',
+    message:
+      '마케팅전문가가 되기 위해서는 대학교의 경영, 마케팅, 심리 관련 학과를 졸업하는 것이 유리하며,',
+    trigger: 'ESFJ-마케팅책임자-7'
   },
   {
-    id: 'ESFJ-애니메이터-6',
-    message: '디지털미디어 환경의 변화로 온라인 플랫폼을 활용한 작가활동이 증가하는 추세야! ',
-    trigger: 'ESFJ-애니메이터-7'
+    id: 'ESFJ-마케팅책임자-7',
+    message: '일부 업체에서는 석사 학위 이상의 학력을 요구하기도 해.',
+    trigger: 'ESFJ-마케팅책임자-8'
   },
   {
-    id: 'ESFJ-애니메이터-7',
-    message: '그리고 웹툰과 애니메이션에 대한 관심과 인기가 높아지고 있어서',
-    trigger: 'ESFJ-애니메이터-8'
+    id: 'ESFJ-마케팅책임자-8',
+    message: '마케팅전문가의 향후 10년간 고용은 연평균 1.6% 증가할 것으로 전망된대!',
+    trigger: 'ESFJ-마케팅책임자-9'
   },
   {
-    id: 'ESFJ-애니메이터-8',
-    message: '향후 지속적으로 고용이 증가할 것으로 전망되고 있어!',
-    trigger: 'ESFJ-애니메이터-9'
-  },
-  {
-    id: 'ESFJ-애니메이터-9',
+    id: 'ESFJ-마케팅책임자-9',
     message: ' 다른 직업들도 다시 볼래? ',
-    trigger: 'ESFJ-애니메이터-10'
+    trigger: 'ESFJ-마케팅책임자-10'
   },
   {
-    id: 'ESFJ-애니메이터-10',
+    id: 'ESFJ-마케팅책임자-10',
     options: [
       { value: 1, label: '응 좋아!', trigger: 'ESFJ-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+
+  //INTJ 시작
+  {
+    id: 'INTJ-1',
+    message:
+      'ESFP! 너는 용의주도한 전략가구나! 전체 인구의 2%에 해당하는 이들은 유독 여성에게서는 더욱 찾아보기 힘든 유형이야 상상력이 풍부하면서도 결단력이 있지.',
+    trigger: 'INTJ-2'
+  },
+  {
+    id: 'INTJ-2',
+    options: [
+      { value: 1, label: '응 맞아!', trigger: 'INTJ-3' },
+      { value: 2, label: '음... 잘 모르겠는걸?', trigger: 'INTJ-3' }
+    ]
+  },
+  {
+    id: 'INTJ-3',
+    message: `관심 있는 특정 분야에 대한 그들의 방대한 지식을 다른 이들과 공유하고 싶어하는 성격이야! 혹시 어릴 때 '책벌레'라는 소리를 자주 들었니?`,
+    trigger: 'INTJ-4'
+  },
+  {
+    id: 'INTJ-4',
+    options: [
+      { value: 1, label: '음... 그런거 같아', trigger: 'INTJ-5' },
+      { value: 2, label: '맞아! 어떻게 알았어?', trigger: 'INTJ-5' }
+    ]
+  },
+  {
+    id: 'INTJ-5',
+    message: `
+    지식을 향한 갈증이 있는 편이라 그럴 줄 알았어!
+확신에 찬 자신감과 함부로 범접할 수 없는 신비로운 아우라를 발산하기도 하지.
+완벽함을 추구하는 전략가라니!
+너 정말 멋진 아이구나!
+    `,
+    trigger: 'INTJ-6'
+  },
+
+  {
+    id: 'INTJ-6',
+    options: [
+      { value: 1, label: '고마워~', trigger: 'INTJ-7' },
+      { value: 2, label: '맞아, 난 최고야', trigger: 'INTJ-7' }
+    ]
+  },
+  {
+    id: 'INTJ-7',
+    message: '논리적이고 부지런하며 평균 지능 지수가 성격유형 중 1위라고 하네!',
+    trigger: 'INTJ-8'
+  },
+  {
+    id: 'INTJ-8',
+    message: '너 정말 똑똑한 아이구나!',
+    trigger: 'INTJ-9'
+  },
+  {
+    id: 'INTJ-9',
+    options: [
+      { value: 1, label: '맞아!', trigger: 'INTJ-10' },
+      { value: 2, label: '그런것 같아!', trigger: 'INTJ-10' }
+    ]
+  },
+  {
+    id: 'INTJ-10',
+    message: '논리적이며 부지런하고 학구열이 강한 너에게 맞는 직업을 추천해 줄게!',
+    trigger: 'INTJ-11'
+  },
+  {
+    id: 'INTJ-11',
+    options: [
+      { value: 1, label: '회계사', trigger: 'INTJ-회계사-1' },
+      { value: 2, label: '경제학자', trigger: 'INTJ-경제학자-1' },
+      { value: 3, label: '파일럿', trigger: 'INTJ-파일럿-1' },
+      { value: 4, label: '경영컨설턴트 ', trigger: 'INTJ-경영컨설턴트-1' }
+    ]
+  },
+  {
+    id: 'INTJ-회계사-1',
+    message:
+      '회계사는 개인이나 기업, 공공시설, 정부기관 등의 경영상태, 재무상태, 지급능력 등의 다양한 재무보고와 관련하여 상담을 해주거나 관련서류를 작성하는 일을 해!',
+    trigger: 'INTJ-회계사-2'
+  },
+  {
+    id: 'INTJ-회계사-2',
+    message: '대상 기업에서 작성한 재무제표가 적절한지 감사하고, 감사 보고서를 작성하는 일도 해.',
+    trigger: 'INTJ-회계사-3'
+  },
+  {
+    id: 'INTJ-회계사-3',
+    message:
+      '회계 관련 서류들을 세밀하게 검토하고 계산상의 오류를 잡아낼 수 있는 수리능력과 분석력, 정확한 판단력이 필요해.',
+    trigger: 'INTJ-회계사-4'
+  },
+  {
+    id: 'INTJ-회계사-4',
+    message: '진취형과 관습형의 흥미를 가진 사람에게 적합하기 때문에 INTJ에겐 딱이야!',
+    trigger: 'INTJ-회계사-5'
+  },
+  {
+    id: 'INTJ-회계사-5',
+    message: '회계사가 되기 위한 학력에는 제한이 없으나',
+    trigger: 'INTJ-회계사-6'
+  },
+  {
+    id: 'INTJ-회계사-6',
+    message:
+      '대학이나 학점은행제를 통해 회계학 및 세무관련과목 12학점 이상, 경영학과목 9학점 이상, 경제학과목 3학점 이상을 이수해야만 공인회계사 시험에 응시할 수 있어.',
+    trigger: 'INTJ-회계사-7'
+  },
+  {
+    id: 'INTJ-회계사-7',
+    message: '공인회계사 국가공인자격 취득이 필수기도 해!',
+    trigger: 'INTJ-회계사-8'
+  },
+  {
+    id: 'INTJ-회계사-8',
+    message: '다른 직업들도 다시 볼래?',
+    trigger: 'INTJ-회계사-9'
+  },
+
+  {
+    id: 'INTJ-회계사-9',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'INTJ-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'INTJ-경제학자-1',
+    message: '경제학자를 선택했구나!',
+    trigger: 'INTJ-경제학자-2'
+  },
+  {
+    id: 'INTJ-경제학자-2',
+    message:
+      '경제학자는 재화와 용역의 생산, 분배 및 교환으로부터 발생하는 여러 경제적ㆍ사회적 문제들을 해결하기 위해',
+    trigger: 'INTJ-경제학자-3'
+  },
+  {
+    id: 'INTJ-경제학자-3',
+    message: '경제학의 원리와 이론을 적용하여 합리적 해결방법을 연구해!',
+    trigger: 'INTJ-경제학자-4'
+  },
+  {
+    id: 'INTJ-경제학자-4',
+    message:
+      '수리능력과 통계 관련 프로그램의 활용능력이 필요하기 때문에 ESFJ에겐 안성맞춤인 직업이야!',
+    trigger: 'INTJ-경제학자-5'
+  },
+  {
+    id: 'INTJ-경제학자-5',
+    message:
+      '경제학자가 되기 위해서는  대학교를 졸업하고, 대학원에 진학하여 경제학 관련 분야의 석사 또는 박사 학위를 취득하는 것이 유리해.',
+    trigger: 'INTJ-경제학자-6'
+  },
+  {
+    id: 'INTJ-경제학자-6',
+    message: '최근 세계 경제가 장기 침체에 빠져 있어 경기전망을 비롯해',
+    trigger: 'INTJ-경제학자-7'
+  },
+  {
+    id: 'INTJ-경제학자-7',
+    message: '청년실업에 따른 각종 경제 현황을 분석하는 연구가 지속적으로 이루어지고 있어서',
+    trigger: 'INTJ-경제학자-8'
+  },
+  {
+    id: 'INTJ-경제학자-8',
+    message: '경제학연구원의 향후 10년간 고용은 1.9% 증가할 것으로 전망된대!',
+    trigger: 'INTJ-경제학자-9'
+  },
+  {
+    id: 'INTJ-경제학자-9',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'INTJ-경제학자-10'
+  },
+  {
+    id: 'INTJ-경제학자-10',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'INTJ-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'INTJ-파일럿-1',
+    message: '파일럿을 선택했구나!',
+    trigger: 'INTJ-파일럿-2'
+  },
+  {
+    id: 'INTJ-파일럿-2',
+    message:
+      '파일럿은 승객이나 화물을 운반하기 위해 여객기, 전투기, 경비행기, 헬리콥터 등을 조종해.',
+    trigger: 'INTJ-파일럿-3'
+  },
+  {
+    id: 'INTJ-파일럿-3',
+    message:
+      '비행스케줄에 따라 항로, 목적지, 연료량. 기상 조건 등을 숙지하고 항공기 상태, 조종실 시스템 등을 점검하는 것도 중요한 업무야.',
+    trigger: 'INTJ-파일럿-4'
+  },
+  {
+    id: 'INTJ-파일럿-4',
+    message:
+      '비행하는 동안 비행기의 장으로 항공승무원의 활동을 지휘하며 운항일지를 기록하는 일도 하지!',
+    trigger: 'INTJ-파일럿-5'
+  },
+  {
+    id: 'INTJ-파일럿-5',
+    message: '기상이변 등 갑작스런 상황 변화에 대한 정확한 판단력과 대처능력이 필요하며',
+    trigger: 'INTJ-파일럿-6'
+  },
+  {
+    id: 'INTJ-파일럿-6',
+    message:
+      '능숙한 외국어 구사 능력, 공간지각력, 운송, 지리, 물리, 통신에 대한 기본지식이 요구돼!',
+    trigger: 'INTJ-파일럿-7'
+  },
+  {
+    id: 'INTJ-파일럿-7',
+    message: '강철같은 판단력을 가진 INTJ에게는 딱인 직업아닐까?',
+    trigger: 'INTJ-파일럿-8'
+  },
+  {
+    id: 'INTJ-파일럿-8',
+    message:
+      '항공기 조종사가 되기 위해서는 공군사관학교, 한국항공대학교, 한서대학교의 항공운항학과에 입학하는 방법이 일반적이야.',
+    trigger: 'INTJ-파일럿-9'
+  },
+  {
+    id: 'INTJ-파일럿-9',
+    message:
+      '항공기 조종사는 한국방송통신전파진흥원에서 주관하는 무선통신사를 우선적으로 취득해야해!',
+    trigger: 'INTJ-파일럿-10'
+  },
+  {
+    id: 'INTJ-파일럿-10',
+    message:
+      '또한 국토교통부에서 실시하고 교통안전공단이 주관하는 국가자격시험인 자가용 조종면허, 사업용 조종면허, 운송용 조종면허를 순차적으로 취득해야해.',
+    trigger: 'INTJ-파일럿-11'
+  },
+  {
+    id: 'INTJ-파일럿-11',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'INTJ-파일럿-12'
+  },
+  {
+    id: 'INTJ-파일럿-12',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'INTJ-10' },
+      { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
+    ]
+  },
+  {
+    id: 'INTJ-경영컨설턴트-1',
+    message:
+      '경영컨설턴트는 기업경영에 관한 문제점을 분석하고 대책을 연구하며, 사업추진에 관한 상담과 자문을 제공하는 일을 해.',
+    trigger: 'INTJ-경영컨설턴트-2'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-2',
+    message: '기업의 인사, 조직, 노무, 사무관리에 진단과 지도를 돕기도 하지.',
+    trigger: 'INTJ-경영컨설턴트-3'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-3',
+    message: '효율적인 경영을 위해 재무관리와 회계의 진단과 지도를 돕는 아주 중요한 직업이야!',
+    trigger: 'INTJ-경영컨설턴트-4'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-4',
+    message: '신뢰성, 분석적 사고, 혁신 등의 성격을 가진 사람인 INTJ에겐 멋진 직업이지!',
+    trigger: 'INTJ-경영컨설턴트-5'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-5',
+    message:
+      '경영컨설턴트가 되기 위해서는 대학에서 경영학, 경제학, 산업공학, 컴퓨터 및 정보관련 등의 전공을 하는 것이 유리하며',
+    trigger: 'INTJ-경영컨설턴트-6'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-6',
+    message: '경영학석사(MBA) 학위 소지자들이 많아.',
+    trigger: 'INTJ-경영컨설턴트-7'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-7',
+    message: '일부 업체에서는 석사 학위 이상의 학력을 요구하기도 해.',
+    trigger: 'INTJ-경영컨설턴트-8'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-8',
+    message:
+      '「2015-2025 중장기 인력수급전망」(한국고용정보원, 2016)에 따르면, 경영컨설턴트는 연평균 0.6%씩 증가하여 2025년 약 4만1,200명에 이를 것으로 전망된대!',
+    trigger: 'INTJ-경영컨설턴트-9'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-9',
+    message: ' 다른 직업들도 다시 볼래? ',
+    trigger: 'INTJ-경영컨설턴트-10'
+  },
+  {
+    id: 'INTJ-경영컨설턴트-10',
+    options: [
+      { value: 1, label: '응 좋아!', trigger: 'INTJ-10' },
       { value: 2, label: '아니~ 괜찮아!', trigger: '3' }
     ]
   }
